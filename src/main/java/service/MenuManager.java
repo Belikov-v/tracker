@@ -24,11 +24,11 @@ public class MenuManager {
      * Метод, отоброжающий меню, запрашивающий ввод
      * пользователя и впоследвие вызывающий необходимый сервис.
      */
-    public void HandleMenuSelection() {
+    public void handleMenuSelection() {
         int input;
         do {
-            PrintMenu();
-            input = GetAnswer();
+            printMenu();
+            input = getAnswer();
 
             switch (input) {
                 case 1:
@@ -50,7 +50,7 @@ public class MenuManager {
     }
 
     // Отображает пункты меню.
-    private void PrintMenu() {
+    private void printMenu() {
         for (int i = 1; i <= functions.length; i++) {
             System.out.println(i + " " + functions[i - 1]);
         }
@@ -62,7 +62,7 @@ public class MenuManager {
      *
      * @return номер пункта меню.
      */
-    private int GetAnswer() {
+    private int getAnswer() {
         int input;
         try {
             input = scanner.nextInt();
