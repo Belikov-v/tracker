@@ -7,9 +7,11 @@ import java.util.Scanner;
  */
 public class MenuManager {
     Scanner scanner;
+    StepTracker stepTracker;
 
-    public MenuManager(Scanner scanner) {
+    public MenuManager(Scanner scanner, StepTracker stepTracker) {
         this.scanner = scanner;
+        this.stepTracker = stepTracker;
     }
 
     // Пункты меню.
@@ -32,13 +34,13 @@ public class MenuManager {
 
             switch (input) {
                 case 1:
-                    System.out.println("Процесс1..");
+                    stepTracker.setSteps();
                     break;
                 case 2:
-                    System.out.println("Процесс2..");
+                    stepTracker.setGoal();
                     break;
                 case 3:
-                    System.out.println("Процесс3..");
+                    stepTracker.showStats();
                     break;
                 case 4:
                     System.out.println("Выход...");
@@ -57,11 +59,7 @@ public class MenuManager {
         System.out.println("Введите только ЦИФРУ выбранного пункта меню.");
     }
 
-    /**
-     * Получаем ввод пункта меню от пользователя (от 1 до кол-ва пунктов меню).
-     *
-     * @return номер пункта меню.
-     */
+    // Получаем пункт меню от пользователя.
     private int getAnswer() {
         int input;
         try {

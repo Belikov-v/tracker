@@ -18,7 +18,7 @@ public class InMemoryMonthData implements MonthData{
      * @param steps количество шагов.
      */
     public void setSteps(int day, int steps) {
-        days[day - 1] = steps;
+        days[day] = steps;
     }
 
     /**
@@ -28,7 +28,7 @@ public class InMemoryMonthData implements MonthData{
      * @return количество шагов за день.
      */
     public int getSteps(int day) {
-        return days[day - 1];
+        return days[day];
     }
 
     /**
