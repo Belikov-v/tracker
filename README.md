@@ -21,9 +21,9 @@
    
 2. Перейдите в папку проекта:
    ```bash
-   cd step-tracker
+   cd tracker/src/main/java
 
 3. Скомпилируйте и запустите программу:
    ```bash
-   javac Main.java
-   java Main
+   javac Program.java
+   java Program
